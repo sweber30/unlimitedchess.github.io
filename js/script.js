@@ -112,7 +112,6 @@ $('.piece').mousedown(function(event) {
 // Virtual mouse down event handlers for all squares (mobile devices)
 $('.piece').on('touchstart', function(event) {
     var id = $(this).parent().attr('id');
-    alert("fishfishfish");
     LeftClickDown(id);
 });
 
