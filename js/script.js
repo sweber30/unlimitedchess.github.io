@@ -109,13 +109,13 @@ $('.piece').mousedown(function(event) {
     }
 });
 
-// Virtual mouse down event handlers for all squares (mobile devices)
+// Touch start event handlers for all squares (touch screens)
 $('.piece').on('touchstart', function(event) {
     var id = $(this).parent().attr('id');
     LeftClickDown(id);
 });
 
-// Mouse down event handlers for all squares
+// Mouse up event handlers for all squares
 $('.piece').mouseup(function(event) {
 
     var id = $(this).parent().attr('id');
@@ -139,8 +139,8 @@ $('.piece').mouseup(function(event) {
     }
 });
 
-// Virtual mouse down event handlers for all squares (mobile devices)
-$('.piece').on('touchstart', function(event) {
+// Touch end event handlers for all squares (touch screens)
+$('.piece').on('touchend', function(event) {
     var id = $(this).parent().attr('id');
     LeftClickUp(id);
 });
