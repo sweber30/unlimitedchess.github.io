@@ -109,6 +109,12 @@ $('.piece').mousedown(function(event) {
     }
 });
 
+// Virtual mouse down event handlers for all squares (mobile devices)
+$('.piece').vmousedown(function(event) {
+    var id = $(this).parent().attr('id');
+    LeftClickDown(id);
+});
+
 // Mouse down event handlers for all squares
 $('.piece').mouseup(function(event) {
 
@@ -131,6 +137,12 @@ $('.piece').mouseup(function(event) {
             console.log('You have a strange mouse!'); // REMOVE THIS LATER **********
 
     }
+});
+
+// Virtual mouse down event handlers for all squares (mobile devices)
+$('.piece').vmouseup(function(event) {
+    var id = $(this).parent().attr('id');
+    LeftClickUp(id);
 });
 
 // Left click down event
