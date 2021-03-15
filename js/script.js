@@ -141,9 +141,20 @@ $('.piece').mouseup(function(event) {
 
 // Touch end event handlers for all squares (touch screens)
 $('.piece').on('touchend', function(event) {
-    var id = $(this).parent().attr('id');
-    alert(id);
-    LeftClickUp(id);
+
+    var id = "";
+    var endTarget = document.elementFromPoint(
+        event.originalEvent.touches[0].pageX,
+        event.originalEvent.touches[0].pageY
+    );
+    
+    id = $(endTarget).parent().attr('id');
+
+    if (id.length == 2) {
+        alert(id);
+        LeftClickUp(id);
+    }
+    
 });
 
 // Left click down event
