@@ -150,6 +150,8 @@ $('.piece').on('touchend', function(event) {
     
     id = $(endTarget).parent().attr('id');
 
+    alert(id);
+
     if (id.length == 2) {
         alert(id);
         LeftClickUp(id);
